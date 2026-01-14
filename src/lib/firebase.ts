@@ -2,14 +2,22 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+import {
+    FB_API_KEY,
+    FB_PROJECT_ID,
+    FB_AUTH_DOMAIN,
+    FB_STORAGE_BUCKET,
+    FB_MESSAGING_SENDER_ID,
+    FB_APP_ID,
+} from "$env/static/private";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB0c_NmiGf38Z3psAPuovLIO24n-U7ZEC8",
-    authDomain: "svelte-tree-93217.firebaseapp.com",
-    projectId: "svelte-tree-93217",
-    storageBucket: "svelte-tree-93217.firebasestorage.app",
-    messagingSenderId: "638881205610",
-    appId: "1:638881205610:web:bbafc7b1c04b6a19bd6913",
+    apiKey: FB_API_KEY,
+    authDomain: FB_AUTH_DOMAIN,
+    projectId: FB_PROJECT_ID,
+    storageBucket: FB_STORAGE_BUCKET,
+    messagingSenderId: FB_MESSAGING_SENDER_ID,
+    appId: FB_APP_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
