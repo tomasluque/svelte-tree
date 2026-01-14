@@ -1,12 +1,12 @@
 <script lang="ts">
-	// import favicon from '$lib/assets/favicon.svg';
-	import "../app.css";
-	
-	let { children } = $props();
+    import "../app.css";
+    interface Props {
+        children?: import("svelte").Snippet;
+    }
+
+    let { children }: Props = $props();
 </script>
 
-<svelte:head>
-	<!-- <link rel="icon" href={favicon} /> -->
-</svelte:head>
-
-{@render children()}
+<div class="min-h-screen flex flex-col">
+    {@render children?.()}
+</div>
